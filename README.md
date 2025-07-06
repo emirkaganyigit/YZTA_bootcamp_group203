@@ -1,11 +1,9 @@
-# 💬 HealthWise
-
-## 👥 Takım İsmi
+##  Takım İsmi
 Veri Bilimi ve Yapay Zeka 203
 
 ---
 
-## 🧑‍🤝‍🧑 Takım Üyeleri ve Görevleri
+##  Takım Üyeleri ve Görevleri
 - Emir Kağan Yiğit: Scrum Master
 - Ahmet Akbaş: Product Owner
 - Ahmet Hilmi Kasap: Developer
@@ -14,20 +12,20 @@ Veri Bilimi ve Yapay Zeka 203
 
 ---
 
-## 💡 Ürün İsmi
+##  Ürün İsmi
 **HealthWise**
 
 ---
 
 
-## 🌟 Ürün Açıklaması
+##  Ürün Açıklaması
 HealthWise, kullanıcıların kendi sağlık verilerini girerek obezite veya kalp krizi riskini tahmin etmesine ve buna göre kişisel öneriler almasına olanak tanıyan bir platformdur. Kullanıcılar yaş, kilo, boy, aktivite düzeyi gibi temel bilgileri girdikten sonra, makine öğrenmesi modeli yardımıyla risk değerlendirmesi yapılır.  
 
 Eğer risk yüksek çıkarsa, sistem kişiye özel diyet ve aktivite önerileri sunar. Böylece kullanıcılar daha bilinçli adımlar atabilir, sağlıklı yaşam planlarını kişiselleştirebilir.
 
 ---
 
-## ✅ Ürün Özellikleri
+##  Ürün Özellikleri
 - Sağlık verisi girişi (yaş, kilo, boy, aktivite seviyesi vb.)
 - Obezite veya kalp krizi risk tahmini
 - Kişiye özel diyet ve aktivite önerileri
@@ -36,46 +34,46 @@ Eğer risk yüksek çıkarsa, sistem kişiye özel diyet ve aktivite önerileri 
 
 ---
 
-## 🎯 Hedef Kitle
+##  Hedef Kitle
 Sağlığını izlemek, bilinçli önlemler almak ve yaşam kalitesini artırmak isteyen bireyler.
 
 ---
 
-## 📝 Jüriye Not
+##  Jüriye Not
 HealthWise, bireylerin sağlık farkındalığını artırmayı ve yapay zeka destekli karar destek sistemiyle sürdürülebilir, sağlıklı yaşam alışkanlıklarını teşvik etmeyi hedefler. Projemiz, veri gizliliğine dikkat ederek kişisel sağlık verilerini sadece öneri üretmek için kullanır.
 
 ---
 
-## 🗓 SPRINT 1
+##  SPRINT 1
 
-### 🗒 Sprint Notları
+###  Sprint Notları
 Sprint başında görev dağılımları netleştirildi. Veri hazırlığı, kullanıcı akışı, arayüz taslakları ve öneri sistemi kurallarına odaklanıldı. Kodlama süreçlerine planlı geçiş için altyapı hazırlıkları tamamlandı.
 
 ---
 
-### 💪 Sprint içinde tamamlanması tahmin edilen puan
+###  Sprint içinde tamamlanması tahmin edilen puan
 40 Puan
 
 ---
 
-### 🔢 Puan tamamlama mantığı
+###  Puan tamamlama mantığı
 Toplam 240 puanlık backlog planlandı. Sprint 1’de temel analiz ve tasarım odaklı 40 puanlık iş hedeflendi. Kodlama süreçleri sonraki sprintlerde genişletilecek.
 
 ---
 
-### 📞 Daily Scrum
+###  Daily Scrum
 Slack ve Google Meet üzerinden gerçekleştirildi. Katılım ve ilerleme takibi düzenli yapıldı.  
 **Sprint 1 Daily Scrum Chats** → [Sprint1_Gorevler.pdf](https://github.com/user-attachments/files/21093350/Sprint1_Gorevler.pdf)
 
 
 ---
 
-## 🔗 Backlog URL
+## Backlog URL
 [https://miro.com/app/board/uXjVK0fzum0=/](https://miro.com/app/board/uXjVIiBvn_U=/?share_link_id=400461321538)
 
 ---
 
-### 💻 Sprint Board Screenshotları
+###  Sprint Board Screenshotları
 Product Backlog ve sprint board güncellemeleri Miro üzerinden paylaşılmıştır.  
 
 ![image](https://github.com/user-attachments/assets/2a95c165-121f-46a0-a303-48d60b9e11c0)
