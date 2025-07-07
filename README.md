@@ -62,8 +62,12 @@ Toplam 240 puanlık backlog planlandı. Sprint 1’de temel analiz ve tasarım o
 ---
 
 ###  Daily Scrum
-Slack ve Google Meet üzerinden gerçekleştirildi. Katılım ve ilerleme takibi düzenli yapıldı.  
-**Sprint 1 Daily Scrum Chats** → [Sprint1_Gorevler.pdf](https://github.com/user-attachments/files/21093350/Sprint1_Gorevler.pdf)
+WhatsApp ve Google Meet üzerinden gerçekleştirildi. Katılım ve ilerleme takibi düzenli yapıldı.  
+**Sprint 1 Daily Scrum Chats** → 
+![Screenshot_20250707_193006_WhatsApp](https://github.com/user-attachments/assets/57b7c2fe-357e-4fce-be24-ed6032b891bb)
+![Screenshot_20250707_192941_WhatsApp](https://github.com/user-attachments/assets/34077683-b2d2-4378-b65e-e8126d23d9f5)
+
+[Sprint1_Gorevler.pdf](https://github.com/user-attachments/files/21093350/Sprint1_Gorevler.pdf)
 
 
 ---
