@@ -1,4 +1,4 @@
-<img width="791" height="1536" alt="ss2" src="https://github.com/user-attachments/assets/5dfb6d3d-1c97-423d-b18e-7987d85c85fd" />##  Takım İsmi
+##  Takım İsmi
 Veri Bilimi ve Yapay Zeka 203
 
 ---
@@ -143,7 +143,7 @@ Kodlama sürecinde karşılaşılan problemler bu toplantılarda çözüldü ve 
 ---
 
 ###  Backlog URL
-[https://miro.com/app/board/uXjVK0fzum0=/](https://miro.com/app/board/uXjVK0fzum0=/)
+https://miro.com/app/board/uXjVIiBvn_U=/?share_link_id=68218108819
 
 ---
 
