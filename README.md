@@ -1,4 +1,4 @@
-##  Takım İsmi
+<img width="791" height="1536" alt="ss2" src="https://github.com/user-attachments/assets/5dfb6d3d-1c97-423d-b18e-7987d85c85fd" />##  Takım İsmi
 Veri Bilimi ve Yapay Zeka 203
 
 ---
@@ -57,7 +57,7 @@ Sprint başında görev dağılımları netleştirildi. Veri hazırlığı, kull
 ---
 
 ###  Puan tamamlama mantığı
-Toplam 240 puanlık backlog planlandı. Sprint 1’de temel analiz ve tasarım odaklı 40 puanlık iş hedeflendi. Kodlama süreçleri sonraki sprintlerde genişletilecek.
+Toplam 200 puanlık backlog planlandı. Sprint 1’de temel analiz ve tasarım odaklı 40 puanlık iş hedeflendi. Kodlama süreçleri sonraki sprintlerde genişletilecek.
 
 ---
 
@@ -111,3 +111,73 @@ Product Backlog ve sprint board güncellemeleri Miro üzerinden paylaşılmışt
 - Kodlama süreçlerine geçmeden önce backend veri şeması prototipinin netleştirilmesine karar verildi.
 
 ---
+
+##  SPRINT 2
+
+###  Sprint Notları
+Sprint 2'de kodlama sürecine geçiş yapıldı. Kullanıcıdan alınan sağlık verilerinin veritabanına kaydedilmesi, Gemini API için özel prompt oluşturulması ve gelen cevapların işlenmesi konularına odaklanıldı.  
+Model entegrasyonu ve kişisel önerilerin sistemle bütünleşmesi sağlandı. Görev dağılımları önceki sprintten devralınarak kod bazlı işler önceliklendirildi.
+
+---
+
+###  Sprint içinde tamamlanması tahmin edilen puan
+90 Puan
+
+---
+
+###  Puan tamamlama mantığı
+Toplam 200 puanlık backlog planlamasının ardından, ilk sprintte 40 puan tamamlandı.  
+Sprint 2'de ağırlıklı olarak sistemin işlevsel kod kısmı geliştirileceği için daha yüksek puanlı görevler planlandı.  
+Veritabanı işlemleri, yapay zeka prompt sisteminin entegrasyonu ve veri işleme modülü dahil olmak üzere toplam 90 puanlık iş hedeflendi.
+
+---
+
+###  Daily Scrum
+Günlük scrum toplantıları WhatsApp ve Google Meet üzerinden devam etti.  
+Kodlama sürecinde karşılaşılan problemler bu toplantılarda çözüldü ve ilerlemeler anlık olarak takip edildi.
+<img width="1525" height="982" alt="Screenshot (47)" src="https://github.com/user-attachments/assets/cb7cbbd2-fcb9-4a40-a3c3-cd3074617169" />
+![WhatsApp Image 2025-07-19 at 23 28 55_7e964fb8](https://github.com/user-attachments/assets/5b18f867-e3ef-469a-822b-70ee9b627bed)
+![WhatsApp Image 2025-07-19 at 23 28 55_eaf02bf6](https://github.com/user-attachments/assets/06a09d3e-90ef-470c-a6c2-d8c78cdff2d8)
+
+
+---
+
+###  Backlog URL
+[https://miro.com/app/board/uXjVK0fzum0=/](https://miro.com/app/board/uXjVK0fzum0=/)
+
+---
+
+###  Sprint Board Screenshotları
+Product Backlog ve sprint board güncellemeleri Miro üzerinden paylaşılmıştır.
+<img width="1428" height="761" alt="Screenshot 2025-07-19 233218" src="https://github.com/user-attachments/assets/834d7dd8-9f65-4bdd-a217-6c526a9d21a7" />
+<img width="233" height="749" alt="Screenshot 2025-07-19 233149" src="https://github.com/user-attachments/assets/d0580229-0fa5-4ed3-ac3c-21a7ff4885a6" />
+
+
+
+---
+
+### 🖼 Ürün Durumu: Ekran Görüntüleri
+Veritabanı bağlantısı test edilmiş, Gemini API entegrasyonu sağlanmış ve risk sonucu + öneriler mock veriyle arayüze entegre edilmiştir.  
+Ekranlar geliştirilmeye devam etmektedir.
+
+<img width="1024" height="1536" alt="ss1" src="https://github.com/user-attachments/assets/1ca4b925-5ff1-4371-aaff-979e353877d0" />
+<img width="791" height="1536" alt="ss2" src="https://github.com/user-attachments/assets/da73b3a4-8da8-41a6-b752-d7b79423f9d1" />
+
+
+---
+
+### ✅ Sprint Review
+- Veritabanı sistemi üzerinden kullanıcı verisi alımı tamamlandı.  
+- Gemini API ile bağlantı kuruldu, kişisel prompt ile ilk testler yapıldı.  
+- Yapay zekadan gelen yanıtlar kategorilere ayrıldı (diyet, egzersiz, risk).  
+- Arayüzde bu içeriklerin gösterimi için ilk taslak gösterimler hazırlandı.  
+- Kullanıcı deneyimi açısından form ve sonuç sayfası düzenlendi.
+
+---
+
+### ♻️ Sprint Retrospective
+- Kod entegrasyon sürecinde yaşanan senkronizasyon problemleri sprint sonuna doğru çözüldü.  
+- Backend–frontend veri akışının daha net tasarlanması gerektiği fark edildi.  
+- API üzerinden alınan verilerin doğruluğu için daha fazla test yapılması kararlaştırıldı.  
+- Kullanıcı test ekranlarının 3. sprint başında tamamlanmasına karar verildi.
+
