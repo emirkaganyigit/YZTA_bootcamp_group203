@@ -161,8 +161,11 @@ Product Backlog ve sprint board güncellemeleri Miro üzerinden paylaşılmışt
 Veritabanı bağlantısı test edilmiş, Gemini API entegrasyonu sağlanmış ve risk sonucu + öneriler mock veriyle arayüze entegre edilmiştir.  
 Ekranlar geliştirilmeye devam etmektedir.
 
-<img width="1024" height="1536" alt="ss1" src="https://github.com/user-attachments/assets/1ca4b925-5ff1-4371-aaff-979e353877d0" />
-<img width="791" height="1536" alt="ss2" src="https://github.com/user-attachments/assets/da73b3a4-8da8-41a6-b752-d7b79423f9d1" />
+![WhatsApp Image 2025-07-20 at 20 03 38_f08eeb78](https://github.com/user-attachments/assets/52498d3c-1224-4e35-be36-952849edb879)
+![WhatsApp Image 2025-07-20 at 20 04 05_4c32203e](https://github.com/user-attachments/assets/f9399d9f-cb34-48c4-bd2a-11727ea944e9)
+![WhatsApp Image 2025-07-20 at 20 04 05_8b0ae497](https://github.com/user-attachments/assets/6505c99c-bf15-4600-b86f-305c2f5d6008)
+
+
 
 
 ---
