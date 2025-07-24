@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import sqlite3
 from flask_cors import CORS
+from gemini_api import generate_recommendation #gemini-api
+
 
 app = Flask(__name__)
 CORS(app)
@@ -52,6 +54,15 @@ def kullanici_ekle():
     conn.close()
 
     return jsonify({"mesaj": "Veri başarıyla kaydedildi!"}), 201
+@app.route('/api/oneriler', methods=['POST'])
+def oneriler_al():
+    veri = request.get_json()
+    try:
+        yanit = generate_recommendation(veri)
+        return jsonify({"oneriler": yanit}), 200
+    except Exception as e:
+        return jsonify({"hata": str(e)}), 500
+
 
 if __name__ == '__main__':
     init_db()
