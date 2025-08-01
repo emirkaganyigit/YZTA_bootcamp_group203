@@ -185,3 +185,70 @@ Ekranlar geliştirilmeye devam etmektedir.
 - API üzerinden alınan verilerin doğruluğu için daha fazla test yapılması kararlaştırıldı.  
 - Kullanıcı test ekranlarının 3. sprint başında tamamlanmasına karar verildi.
 
+--- 
+
+##    SPRINT 3
+
+### Sprint Notları
+Bu sprintte kullanıcı arayüzü üzerinde geliştirmeler yapılmış, Gemini API'den gelen sağlık analizlerinin uygulama içinde görsel olarak sunulması hedeflenmiştir. Ayrıca kullanıcıların geçmiş analiz sonuçlarını görebilmesi için veritabanı bağlantılı bir geçmiş sistemi planlanmış ve geliştirilmiştir. Veri gösterimi, kayıt, PDF çıktısı ve analiz detay sayfaları sprint boyunca odak alanları olmuştur.
+
+---
+
+### Sprint içinde tamamlanması tahmin edilen puan  
+80 Puan
+
+---
+
+### Puan tamamlama mantığı  
+Toplamda 210 puanlık backlog planı kapsamında; ilk iki sprintte 120 puanlık görev tamamlanmıştır. Bu sprintte görselleştirme, geçmiş kaydı ve kullanıcı deneyimi odaklı 80 puanlık görev tanımlanmış ve dağıtılmıştır.
+
+---
+
+### Daily Scrum  
+WhatsApp grubumuz ve Google Meet toplantıları ile günlük iletişim sağlanmıştır.  
+Toplantı notları ve ilerlemeler PDF halinde sunulmuştur.  
+
+**Sprint 3 Daily Scrum Chats** →  
+<img width="1057" height="839" alt="image" src="https://github.com/user-attachments/assets/4b312817-2f6b-49b0-819b-888d37e5f0f0" />
+
+
+---
+
+###  Backlog URL
+https://miro.com/app/board/uXjVIiBvn_U=/?share_link_id=68218108819
+
+---
+
+### Sprint Board Screenshotları  
+Sprint board ve backlog güncellemeleri Miro üzerinde tutulmaktadır:  
+
+<img width="209" height="711" alt="image" src="https://github.com/user-attachments/assets/dce76203-d9b9-4c62-8e92-eba138634258" />
+<img width="1422" height="745" alt="image" src="https://github.com/user-attachments/assets/5729f3a6-8641-4a17-9750-c8264939fa56" />
+
+
+
+---
+
+### Ürün Durumu: Ekran Görüntüleri  
+Aşağıda analiz sonucu ekranı ve geçmiş analizler sayfası örneklenmiştir:  
+
+
+---
+
+### ✅ Sprint Review
+- Gemini yanıtları frontend arayüzünde başlık başlık gösterilecek şekilde işlenmiştir.
+- Sağlık risk puanı progress bar ile görsel olarak sunulmuştur.
+- Yapılan her analiz, tarih ile birlikte veritabanına kaydedilmiş ve listelenebilir hale getirilmiştir.
+- Kullanıcı geçmiş analizlerine erişebilmiş ve detay sayfasından önceki sağlık raporlarını görüntüleyebilmiştir.
+
+---
+
+### ♻️ Sprint Retrospective
+- PDF çıktısı alma özelliği üzerine konuşulmuştur.  
+- Veritabanı yapısına `analiz_json` sütunu eklenmiştir.  
+- Kullanıcı arayüzünün daha anlaşılır olması için renk düzenlemesi yapılması önerilmiştir.  
+- Bir sonraki versiyonda veri görselleştirmeye (grafik/çizelge) odaklanılmasına karar verilmiştir.  
+- Frontend–backend entegrasyon sürecinde test adımlarının dökümante edilmesi kararlaştırılmıştır.
+
+---
+
