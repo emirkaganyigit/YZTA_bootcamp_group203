@@ -230,7 +230,6 @@ Sprint board ve backlog güncellemeleri Miro üzerinde tutulmaktadır:
 ---
 
 ### Ürün Durumu: Ekran Görüntüleri  
-Aşağıda analiz sonucu ekranı ve geçmiş analizler sayfası örneklenmiştir:  
 
 
 ---
