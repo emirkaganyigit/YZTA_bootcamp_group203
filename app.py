@@ -66,15 +66,26 @@ def saglik_analizi():
         data = request.get_json()
         print("Backend'e gelen veri:", data)  # Debug log
 
+        # Helper function to safely convert to int
+        def safe_int_convert(value):
+            if not value:
+                return None
+            # Remove any non-numeric characters and convert
+            cleaned = str(value).replace('+', '').replace('-', '').strip()
+            try:
+                return int(cleaned)
+            except ValueError:
+                return None
+
         user_data = {
-            "age": int(data.get("age")) if data.get("age") else None,
+            "age": safe_int_convert(data.get("age")),
             "gender": data.get("gender"),
-            "height_cm": int(data.get("height_cm")) if data.get("height_cm") else None,
-            "weight_kg": int(data.get("weight_kg")) if data.get("weight_kg") else None,
+            "height_cm": safe_int_convert(data.get("height_cm")),
+            "weight_kg": safe_int_convert(data.get("weight_kg")),
             "family_history": data.get("family_history"),
             "high_caloric_food": data.get("high_caloric_food"),
             "vegetable_consumption": data.get("vegetable_consumption"),
-            "meals_per_day": int(data.get("meals_per_day")) if data.get("meals_per_day") else None,
+            "meals_per_day": safe_int_convert(data.get("meals_per_day")),
             "snacks": data.get("snacks"),
             "smoke": data.get("smoke"),
             "water_intake": data.get("water_intake"),
@@ -95,4 +106,18 @@ def saglik_analizi():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    try:
+        # Try port 5001 first, then 5000, then 8000
+        ports = [5001, 5000, 8000]
+        for port in ports:
+            try:
+                print(f"Backend başlatılıyor... Port {port} deneniyor...")
+                app.run(debug=True, port=port, host='127.0.0.1')
+                break
+            except OSError as e:
+                print(f"Port {port} kullanılamıyor: {e}")
+                if port == ports[-1]:  # Last port
+                    print("Hiçbir port kullanılamıyor. Lütfen başka bir uygulamayı kapatın.")
+                    break
+    except Exception as e:
+        print(f"Backend başlatılırken hata oluştu: {e}")

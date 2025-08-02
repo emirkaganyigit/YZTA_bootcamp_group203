@@ -1,12 +1,12 @@
-export default function NavigationButtons({ showBack, showNext, onBack, onNext, onFinish }) {
+export default function NavigationButtons({ showBack, showNext, onBack, onNext, onFinish, canProceed = true }) {
   return (
-    <div className="flex justify-between mt-4">
+    <div className="flex justify-between mt-6">
       {showBack ? (
         <button
           onClick={onBack}
-          className="px-4 py-2 bg-gray-400 hover:bg-gray-300 rounded"
+          className="px-6 py-3 bg-gray-400 hover:bg-gray-300 rounded-lg transition-colors font-semibold"
         >
-          Geri
+          ← Geri
         </button>
       ) : (
         <div />
@@ -15,16 +15,26 @@ export default function NavigationButtons({ showBack, showNext, onBack, onNext, 
       {showNext ? (
         <button
           onClick={onNext}
-          className="px-4 py-2 bg-blue-800 text-white hover:bg-blue-600 rounded"
+          disabled={!canProceed}
+          className={`px-6 py-3 rounded-lg transition-colors font-semibold ${
+            canProceed 
+              ? 'bg-blue-600 text-white hover:bg-blue-700' 
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+          }`}
         >
-          İleri
+          İleri →
         </button>
       ) : (
         <button
           onClick={onFinish}
-          className="px-4 py-2 bg-green-500 text-white hover:bg-green-900 rounded"
+          disabled={!canProceed}
+          className={`px-6 py-3 rounded-lg transition-colors font-semibold ${
+            canProceed 
+              ? 'bg-green-600 text-white hover:bg-green-700' 
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+          }`}
         >
-          Bitir
+          Analizi Tamamla
         </button>
       )}
     </div>

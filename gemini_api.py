@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-API_KEY = "api key --"
+API_KEY = ""
 
 # 🔐 API anahtarı kontrolü
 if not API_KEY:

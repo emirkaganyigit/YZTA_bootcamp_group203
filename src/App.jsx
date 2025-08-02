@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import QuestionBox from "./components/QuestionBox";
+import ResultsPage from "./components/ResultsPage";
 import questions from "./data/questions";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleAnswerChange = (value) => {
     setAnswers((prev) => ({
@@ -27,8 +30,36 @@ export default function App() {
     }
   };
 
+  const testBackendConnection = async (port) => {
+    try {
+      console.log(`Testing connection to port ${port}...`);
+      const response = await fetch(`http://127.0.0.1:${port}/`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(`Port ${port} response:`, response.status, response.ok);
+      return response.ok;
+    } catch (error) {
+      console.log(`Port ${port} failed:`, error.message);
+      return false;
+    }
+  };
+
   const handleFinish = async () => {
-    console.log("Cevaplar:", answers);
+    console.log("=== Starting Analysis ===");
+    console.log("Answers:", answers);
+
+    const unansweredQuestions = questions.filter(q => !answers[q.id]);
+    if (unansweredQuestions.length > 0) {
+      console.log("Unanswered questions:", unansweredQuestions);
+      setError("Lütfen tüm soruları cevaplayın.");
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
 
     // Backend'in beklediği key'lerle eşleştirme
     const userData = {
@@ -49,8 +80,26 @@ export default function App() {
       transportation: answers[15] || null,
     };
 
+    console.log("User data to send:", userData);
+
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/analiz", {
+      const ports = [5001, 5000, 8000];
+      let workingPort = null;
+      
+      for (const port of ports) {
+        if (await testBackendConnection(port)) {
+          workingPort = port;
+          break;
+        }
+      }
+
+      if (!workingPort) {
+        throw new Error("Backend bağlantısı kurulamadı. Lütfen backend'in çalıştığından emin olun.");
+      }
+
+      console.log(`Using backend port: ${workingPort}`);
+
+      const response = await fetch(`http://127.0.0.1:${workingPort}/api/analiz`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,16 +107,30 @@ export default function App() {
         body: JSON.stringify(userData),
       });
 
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+
       if (!response.ok) {
-        throw new Error(`Sunucu hatası: ${response.status}`);
+        const errorText = await response.text();
+        console.log("Error response:", errorText);
+        throw new Error(`Sunucu hatası: ${response.status} - ${errorText}`);
       }
 
       const data = await response.json();
-      console.log("API'den gelen yanıt:", data);
+      console.log("API response data:", data);
+
+      if (!data.bmi_skoru || !data.saglik_risk_skoru || !data.oneriler) {
+        console.log("Invalid response structure:", data);
+        throw new Error("API'den geçersiz yanıt alındı");
+      }
+      
+      console.log("Setting result:", data);
       setResult(data);
     } catch (error) {
       console.error("API isteği sırasında hata oluştu:", error);
-      alert("Veri gönderilirken hata oluştu!");
+      setError(`Analiz sırasında bir hata oluştu: ${error.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -75,7 +138,18 @@ export default function App() {
     setAnswers({});
     setCurrentIndex(0);
     setResult(null);
+    setError(null);
   };
+
+  if (result) {
+    console.log("Rendering results page with:", result);
+    return (
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
+        <ResultsPage result={result} onRestart={handleRestart} />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -84,20 +158,20 @@ export default function App() {
         Detaylı analiz için lütfen soruları cevaplayın
       </div>
 
-      {result ? (
-        <div className="mt-10 text-center">
-          <h2 className="text-xl font-bold">Analiz Sonucu</h2>
-          <pre className="bg-white shadow p-4 rounded mt-4 text-left inline-block">
-            {JSON.stringify(result, null, 2)}
-          </pre>
-          <button
-            onClick={handleRestart}
-            className="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            Yeniden Başla
-          </button>
+      {error && (
+        <div className="max-w-md mx-auto mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          {error}
         </div>
-      ) : (
+      )}
+
+      {loading && (
+        <div className="flex justify-center items-center mt-10">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <span className="ml-3 text-lg">Analiz yapılıyor...</span>
+        </div>
+      )}
+
+      {!loading && (
         <div className="flex justify-center mt-10">
           <QuestionBox
             question={questions[currentIndex]}
