@@ -231,6 +231,7 @@ Sprint board ve backlog güncellemeleri Miro üzerinde tutulmaktadır:
 
 ### Ürün Durumu: Ekran Görüntüleri  
 
+![WhatsApp Image 2025-08-02 at 14 51 58](https://github.com/user-attachments/assets/99f69c75-4768-40b6-b44a-3db0985cc23e)
 
 ---
 
