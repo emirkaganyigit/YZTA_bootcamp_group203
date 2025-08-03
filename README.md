@@ -239,6 +239,7 @@ Sprint board ve backlog güncellemeleri Miro üzerinde tutulmaktadır:
 
 ### ✅ Sprint Review
 - Gemini yanıtları frontend arayüzünde başlık başlık gösterilecek şekilde işlenmiştir.
+- PDF ile çıktı alma özelliği eklenmiştir.
 - Sağlık risk puanı progress bar ile görsel olarak sunulmuştur.
 - Yapılan her analiz, tarih ile birlikte veritabanına kaydedilmiş ve listelenebilir hale getirilmiştir.
 - Kullanıcı geçmiş analizlerine erişebilmiş ve detay sayfasından önceki sağlık raporlarını görüntüleyebilmiştir.
@@ -247,7 +248,6 @@ Sprint board ve backlog güncellemeleri Miro üzerinde tutulmaktadır:
 
 ### ♻️ Sprint Retrospective
 - PDF çıktısı alma özelliği üzerine konuşulmuştur.  
-- Veritabanı yapısına `analiz_json` sütunu eklenmiştir.  
 - Kullanıcı arayüzünün daha anlaşılır olması için renk düzenlemesi yapılması önerilmiştir.  
 - Bir sonraki versiyonda veri görselleştirmeye (grafik/çizelge) odaklanılmasına karar verilmiştir.  
 - Frontend–backend entegrasyon sürecinde test adımlarının dökümante edilmesi kararlaştırılmıştır.
